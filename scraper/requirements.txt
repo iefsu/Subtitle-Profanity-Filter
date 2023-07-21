@@ -1,0 +1,5 @@
+aiohttp
+sanic
+sanic-cors
+redis[hiredis]
+uvicorn

@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  redis_db:
+    image: redis:latest
+    container_name: redis_db
+    restart: always
+    ports:
+      - "8379:6379"
+
+  scraper_service:
+    build: ./scraper
+    container_name: scraper
+    restart: always
+    ports:
+      - "1337:8000" # TODO: use traefik
